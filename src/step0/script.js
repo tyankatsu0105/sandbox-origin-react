@@ -1,5 +1,3 @@
-// const element = <h1 title="foo">Hello</h1>
-
 const element = {
   type: 'h1',
   props: {
