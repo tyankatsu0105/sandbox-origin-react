@@ -1,0 +1,23 @@
+{
+  "name": "sandbox-origin-react",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "browser-sync start --server src --serveStatic src --files src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tyankatsu0105/sandbox-origin-react.git"
+  },
+  "keywords": [],
+  "author": "tyankatsu <frips.ryilsufupe+dev@gmail.com> (https://tyankatsu.netlify.com/)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tyankatsu0105/sandbox-origin-react/issues"
+  },
+  "homepage": "https://github.com/tyankatsu0105/sandbox-origin-react#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.7"
+  }
+}
