@@ -20,6 +20,9 @@
   },
   "homepage": "https://github.com/tyankatsu0105/sandbox-origin-react#readme",
   "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.8.7",
+    "@babel/plugin-transform-react-jsx": "^7.8.3",
     "browser-sync": "^2.26.7",
     "npm-run-all": "^4.1.5",
     "onchange": "^6.1.0",
