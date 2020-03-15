@@ -1,34 +1,34 @@
-jsxではXML構文をjsに変換するので、HTMLのように書ける
+jsx では XML 構文を js に変換するので、HTML のように書ける
+
 ```jsx
-const element = <h1 title="foo">Hello</h1>
+const element = <h1 title="foo">Hello</h1>;
 ```
 
-Reactでは、createElementのときにこういう構造になる
+React では、createElement のときにこういう構造になる
+
 ```jsx
-const element = React.createElement(
-  "h1",
-  { title: "foo" },
-  "Hello"
-)
+const element = React.createElement('h1', { title: 'foo' }, 'Hello');
 ```
 
-擬似的にelementを使ってプロパティで表現する
+擬似的に element を使ってプロパティで表現する
+
 ```js
 const element = {
-  type: 'h1',
-  props: {
-    title: 'foo',
-    children: 'Hello'
-  }
-}
+	type: 'h1',
+	props: {
+		title: 'foo',
+		children: 'Hello'
+	}
+};
 ```
 
-最終的にDOMをappendしたいcontainerを指定する
+最終的に DOM を append したい container を指定する
+
 ```js
 const container = document.getElementById('app');
 
-const node = document.createElement(element.type)
-node['title'] = element.props.title
+const node = document.createElement(element.type);
+node['title'] = element.props.title;
 
 const text = document.createTextNode('');
 text['nodeValue'] = element.props.children;
@@ -37,22 +37,25 @@ node.appendChild(text);
 container.appendChild(node);
 ```
 
-nodeを作る
-タグはtypeからh1とする
-attributeはpropsのtitleを使う
+node を作る
+タグは type から h1 とする
+attribute は props の title を使う
+
 ```js
-const node = document.createElement(element.type)
-node['title'] = element.props.title
+const node = document.createElement(element.type);
+node['title'] = element.props.title;
 ```
 
-innerTextじゃなくてtextNodeを作るようにすると、確実にtextタイプのnodeが作れるのでcreateTextNodeを使う
-nodeValue、この場合はtextNodeのvalueをpropsのchildrenとする
+innerText じゃなくて textNode を作るようにすると、確実に text タイプの node が作れるので createTextNode を使う
+nodeValue、この場合は textNode の value を props の children とする
+
 ```js
 const text = document.createTextNode('');
 text['nodeValue'] = element.props.children;
 ```
 
-appendして終わり
+append して終わり
+
 ```js
 node.appendChild(text);
 container.appendChild(node);
